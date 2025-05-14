@@ -15,9 +15,7 @@ class DFA:
         return current_state in self.accept_states
 
 def regex_to_dfa(regex: str) -> DFA:
-    # هذه دالة مبسطة للتوضيح، التحويل الفعلي يتطلب خوارزمية أكثر تعقيداً
     if regex == "(a|b)*abb":
-        # DFA مخصص للتعبير (a|b)*abb
         states = {'q0', 'q1', 'q2', 'q3'}
         alphabet = {'a', 'b'}
         transitions = {
@@ -32,7 +30,6 @@ def regex_to_dfa(regex: str) -> DFA:
     else:
         raise ValueError("التعبير المنتظم غير مدعوم في هذه الدالة المبسطة")
 
-# اختبار الدالة
 test_cases = [
     ("aabb", True),
     ("ababa", False),

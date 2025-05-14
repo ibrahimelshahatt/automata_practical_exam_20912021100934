@@ -46,7 +46,6 @@ class TuringMachine:
         
         return self.state == 'accept'
 
-# اختبار تورينج ماشين
 tm = TuringMachine()
 test_cases = [
     ("", True),

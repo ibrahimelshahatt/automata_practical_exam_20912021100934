@@ -6,17 +6,14 @@ class PDA:
         self.stack = []
         length = len(input_string)
         
-        # يجب أن يكون الطول فردياً
         if length % 2 == 0:
             return False
         
         middle = length // 2
-        # ندفع النصف الأول إلى المكدس
+       
         for i in range(middle):
             self.stack.append(input_string[i])
         
-        # نتخطى الحرف الأوسط (لا يؤثر في التناظر)
-        # ونقارن النصف الثاني مع محتويات المكدس
         for i in range(middle + 1, length):
             if not self.stack:
                 return False
@@ -25,7 +22,6 @@ class PDA:
         
         return len(self.stack) == 0
 
-# اختبار الـPDA
 pda = PDA()
 test_cases = [
     ("a", True),
